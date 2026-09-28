@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090909" />
+  <title>Ali Asset Global Pay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span>✦</span><div class="globe">◎</div><span>✦</span></div>
+      <h1>Ali Asset <em>Global Pay</em></h1>
+      <button class="icon-button notification" aria-label="Notifications"><span class="bell"></span><i></i></button>
+    </header>
+
+    <section class="balance-card" aria-label="Account balance">
+      <div class="balance-label">Total Balance <button id="toggle-balance" class="eye" aria-label="Hide balance">◉</button></div>
+      <strong id="balance">$24,586<span>.32</span></strong>
+      <p><b>+$1,240.50 (5.32%)</b> <span>↑ This month</span></p>
+    </section>
+
+    <section class="quick-actions" aria-label="Quick actions">
+      <button class="primary-action" data-toast="Top up flow opened">Top Up <span>＋</span></button>
+      <button class="secondary-action" data-toast="Transfer flow opened"><span>↪</span> Transfer</button>
+    </section>
+
+    <div class="section-heading"><h2>Virtual Card</h2><button class="text-button">See all</button></div>
+    <section class="virtual-card" aria-label="Virtual card">
+      <div class="card-art"></div>
+      <div class="card-brand"><div class="mini-globe">◎</div><span>VIRTUAL CARD <b>•</b><br />GLOBAL PAY</span></div>
+      <div class="card-number"><span>••••</span><span>••••</span><strong>1284</strong></div>
+      <div class="card-meta"><div><small>VALID<br />THRU</small><strong>09/28</strong></div><div><small>CARDHOLDER</small><strong>Alex Morgan</strong></div></div>
+      <div class="mastercard" aria-label="Mastercard"><i></i><i></i></div>
+    </section>
+
+    <button class="scanner" data-toast="QR scanner opened"><span class="qr-icon">⌗</span><span><b>QR Code Scanner</b><small>Scan to pay instantly</small></span><span class="scan-corner">◌</span></button>
+
+    <div class="section-heading methods-heading"><h2>Payment Methods</h2></div>
+    <section class="methods" aria-label="Payment methods">
+      <button class="method" data-toast="Mastercard selected"><span class="mc-logo"><i></i><i></i></span><b>Mastercard</b><small>•••• 4521</small></button>
+      <button class="method" data-toast="Visa selected"><strong class="visa-logo">VISA</strong><b>Visa</b><small>•••• 8892</small></button>
+      <button class="method" data-toast="Bitcoin wallet selected"><strong class="btc-logo">₿</strong><b>Bitcoin</b><small>• BTC Wallet</small></button>
+    </section>
+
+    <button class="pay-button" data-toast="Payment started"><span>ϟ</span> Pay with App</button>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active"><span>⌂</span><b>Home</b><i></i></button>
+      <button class="nav-item" data-toast="Payments selected"><span>▣</span><b>Payments</b></button>
+      <button class="nav-item" data-toast="Card selected"><span>▤</span><b>Card</b></button>
+      <button class="nav-item" data-toast="Activity selected"><span>ϟ</span><b>Activity</b></button>
+      <button class="nav-item" data-toast="Profile selected"><span>♙</span><b>Profile</b></button>
+    </nav>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
